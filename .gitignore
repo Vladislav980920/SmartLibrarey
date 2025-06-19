@@ -2,9 +2,23 @@ target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
+# Исключить все файлы с расширением .a
+*.a
+
+# Но отслеживать файл lib.a даже если он подпадает под исключение выше
+!lib.a
+
+# Исключить файл TODO в корневом каталоге, но не файл в subdir/TODO
+/TODO
+
+# Игнорировать файл doc/notes.txt, но не файл doc/server/arch.txt
+doc/*.txt
+
+# Игнорировать все .txt файлы в каталоге doc/
+doc/**/*.txt
 
 ### IntelliJ IDEA ###
-.idea/modules.xml
+.idea/modules.xmld
 .idea/jarRepositories.xml
 .idea/compiler.xml
 .idea/libraries/
